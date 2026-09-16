@@ -32,8 +32,7 @@ ON TABLE members_raw;
 
 -- Check the stream
 
-SELECT *
-FROM members_std_stream;
+SELECT * FROM members_std_stream;
 
 
 -- Check the stream offset
@@ -59,8 +58,7 @@ VALUES
 
 -- Check the stream
 
-SELECT *
-FROM members_std_stream;
+SELECT * FROM members_std_stream;
 
 
 -- Check the stream offset
@@ -92,8 +90,7 @@ WHERE METADATA$ACTION = 'INSERT';
 
 -- Check the production table
 
-SELECT *
-FROM members_prod;
+SELECT * FROM members_prod;
 
 
 -- Check the stream offset
@@ -144,7 +141,7 @@ UPDATE members_raw SET fee = 20 WHERE id = 7;
 
 -- Check the production table
 
-SELECT *FROM members_prod;
+SELECT * FROM members_prod;
 
 
 -- Consume the INSERT records from the stream using MERGE
@@ -176,5 +173,5 @@ WHEN NOT MATCHED THEN
 
 -- Check the production table
 
-SELECT *FROM members_prod;
+SELECT * FROM members_prod;
 ```
